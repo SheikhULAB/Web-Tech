@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>jQuery Add Table Rows</title>
+      <link rel="stylesheet" type="text/css" href="css/homework1.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    
+  </script>
+
+      <script>
+         $(document).ready(function(){
+         
+             $(".add").click(function(){
+         
+                 var name = $("#name").val();
+
+                 var myid = $("#myid").val();
+
+                 var department = $("#cse").val();
+         
+                 //var subject = $("#department").val();
+         
+                var markup = "<tr><td>" + name + "</td><td>" + myid + "</td><td>" + department + "</td></tr>";
+
+         
+                 $("table tbody").append(markup);
+         
+             }); 
+
+             $(".delete").click(function(){
+
+                 $("table tbody").remove(markup);
+
+                });
+
+         });    
+      </script>
+
+
+   </head>
+   <body>
+      <form>
+
+         Name : <br>
+
+         <input type="text" id="name" onkeypress="validate()" placeholder="Enter Name"><br><br>
+
+         ID :  <br>
+
+         <input type="text" id="myid" placeholder="Enter ID" minlength="8" maxlength="8">
+         <br><br>
+
+         Department :
+
+         <input type="radio" id ="cse" name="department" value="cse"> CSE
+         <input type="radio" id="eee" name="department" value="eee"> EEE
+         <br><br>
+  
+         <input type="button" class="add" id="addButton" value="ADD" disabled> 
+
+         <input type="button" class="delete" id="deleteButton" value="DELETE">
+        
+
+         <br><br>
+
+      </form>
+
+      <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>ID</th>
+               <th>Department</th>
+            </tr>
+         </thead>
+         <tbody>
+            <!--Table Data-->
+         </tbody>
+      </table>
+
+      <script type="">
+
+        function validate(){
+    var userName = document.getElementById("name").value;
+
+    
+
+    if (userName.length <1) {
+         
+      $("#addButton").css("color", "red");
+      
+     document.getElementById("addButton").disabled = true;
+ 
+    } else{
+            $("#addButton").css("color", "red");
+
+            document.getElementById("addButton").disabled = false;
+
+
+
+    }
+  
+
+    var userId = document.getElementById("myid").value;
+
+      if(userId.charAt(0)!=='B') {
+        alert("ID must start with B");
+
+        //document.getElementById("addButton").disabled = true;
+      }
+
+
+
+  }
+      </script>
+
+   </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

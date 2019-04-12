@@ -1,0 +1,18 @@
+table{
+	border: 2px solid red;
+	margin: 20px auto;
+	width: 490px;
+	height: 172px;
+	background: #ddd;
+	border-collapse: collapse;
+}
+table td{
+	text-align: center;
+	font-size: 16px;
+}
+.total{
+	text-align: left;
+}
+.caption{
+	background: #ddd
+}

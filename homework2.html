@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ADD and Delete from Table</title>
+	<link rel="stylesheet" type="text/css" href="css/homework2.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    
+  </script>
+
+   <script>
+         $(document).ready(function(){
+         
+             $("#Add").click(function(){
+         
+                 var name = $("#userName").val();
+
+                 var myid = $("#userID").val();
+
+                 var department = $("input[name='department']:checked").val();
+         
+                var markup = "<tr> <td>" + name + "</td> <td>" + myid + "</td> <td>" + department + "</td> </tr>";
+         
+                 $("table tbody").append(markup);
+         
+             }); 
+
+         $("#Delete").click(function(){
+              
+         $("Table tr:last").remove();
+
+         });
+
+
+         });    
+
+      </script>
+
+</head>
+<body>
+
+<form>
+
+  <span> Name :  </span><br>
+
+
+  <input type="text" name="userName" class="formdesign" id="userName" placeholder="Enter Name"> <br><br>
+
+  <span> ID : </span> <br>
+
+  <input type="text" name="userID" class="formdesign" id="userID" placeholder="Enter ID"> <br><br>
+
+  <span> Department : </span>
+
+     <input type="radio" id ="cse" name="department" value="cse"> CSE
+      <input type="radio" id="eee" name="department" value="eee"> EEE
+      <br><br>
+
+
+ <input type="button" class="buttondesign" id="Add" value="ADD Row" onclick="Validate()" > 
+ <input type="button" class="buttondesign" id="Delete" name="Delete" value="Delete Row">
+
+ </form> <br><br>
+
+ <table>
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>ID</th>
+               <th>Department</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            <!--Table Data-->
+
+            </tr>
+
+         </tbody>
+      </table>
+
+
+ <script type="">
+ 	function Validate(){
+ 		var userName = document.getElementById("userName").value;
+ 		if (userName.length == 0) {
+              alert("Name is not given");
+ 		}
+
+    var userId = document.getElementById("userID").value;
+     if (userId.length == 0) {
+          alert("Id is not given");
+     } else if (userId.charAt(0)!=='B') {
+         alert("ID must start with B");
+     }
+
+ 	}
+ </script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

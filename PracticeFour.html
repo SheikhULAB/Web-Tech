@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+        
+        
+        var ss = new Array();
+        var tt = new Array();
+        var ww = new Array();
+        ss = "Ashraf";
+        tt = ss.split("");
+        ww = ss.length
+        
+        document.write(tt);
+        document.write("<br><br>");
+        document.write(ss.length);
+        document.write("<br><br>");
+        document.write(tt.length);
+        document.write("<br><br>");
+        
+        var rand = Math.floor(Math.random() * ww)
+        document.write(rand)
+        document.write("<br><br>");
+        
+        function remove_character(str, char_pos) {
+                      part1 = str.substring(0, char_pos);
+                      part2 = str.substring(char_pos + 1, str.length);
+                      return (part1 + part2);
+            
+        }
+        
+       
+        document.write(remove_character(ss,rand))
+                
+          
+
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

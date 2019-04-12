@@ -1,0 +1,133 @@
+body{
+    margin-right: -115px;
+    margin-left: 200px;
+    background: #E6E6FA;
+    margin-top: 20%;
+}
+
+button {
+    color: #444444;
+    background: #F3F3F3;
+    border: 1px #DADADA solid;
+    padding: 15px 10px;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 15pt;
+    outline: none;
+    cursor: pointer;
+    border-top-left-radius: 20px;
+   border-top-right-radius: 30px;
+   border-bottom-right-radius: 50px;
+   border-bottom-left-radius: 40px;
+
+
+}
+
+button:hover{
+    
+}
+
+button:hover {
+    border: 1px #C6C6C6 solid;
+    color: #333333;
+    background: #dcedd7;
+    transition: 1s all ease;
+}
+
+
+button.blue {
+    color: white;
+    background: #4C8FFB;
+    border: 1px #3079ED solid;
+    font-style: inherit;
+   border-radius: 30px;
+    width: 8%;
+    
+}
+
+button.blue:hover {
+    border: 1px #2F5BB7 solid;
+      background: #103ad1;
+    transition: 1s all ease;
+}
+
+
+button.orange {
+    color: white;
+    border: 1px solid #FB8F3D; 
+    background: #FB8F3D;
+    font-style: italic;
+    border-radius: 25% 10%;
+    width: 9%;
+ 
+}
+
+button.orange:hover {
+    border: 1px solid #EB5200;
+    background: orange;
+ 
+    transition: 2s all ease;
+}
+
+
+button.red {
+  
+    border: 1px solid #DD4B39;
+    color: white;
+    font-style: all;
+    border-radius: 10% 30% 50% 70%;
+    width: 10%;
+    background: #DD4B39;
+    
+}
+
+button.red:hover {
+     background: red;
+     border: 1px solid #AF301F;
+     transition: 1s all ease;
+}
+
+button.green{
+    background: green;
+    color: red;
+    font-style: oblique;
+    border-radius: 10% / 50%;
+    width: 12%;
+    
+}
+
+button.green:hover{
+    background: #0cf442;
+    transition: 1s all ease;
+}
+
+button.black{
+    color: white;
+    background: black;
+    font-style: unset;
+    border-radius: 10px 100px / 120px;
+    width: 13%;
+    }
+button.black:hover{
+    background: #717a73;
+    transition: 1s all ease;
+    color: black;
+}
+
+button.yellow{
+    color: black;
+    background: yellow;
+    font-style: italic;
+    width: 14%;
+    border-radius: 50% 20% / 10% 40%;
+    
+}
+
+button.yellow:hover{
+    background: #f7f1a3;
+    color: #7c7621;
+    transition: 1s all ease;
+}
+
+
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>assignment 3</title>
+
+<script type="">
+	
+	function validate(){
+		var userName = document.getElementById("uName").value;
+
+		
+
+		if (userName.length == 0) {
+			//document.write("missing");
+			alert("Name is not valid");
+		} else if(!isNaN(userName)) {
+			alert("please enter only character");
+		}     
+
+
+		var userId = document.getElementById("uId").value;
+
+		if (isNaN(userId)) {
+            alert("ID is not valid");
+       } 
+
+	}
+
+</script>
+
+</head>
+<body>
+
+<form>
+  <table>
+
+	<tr>
+	  <td>Name</td>
+	  <td><input type="text" name="" id="uName" required pattern="[a-zA-Z_.-]*"></td>
+	</tr>
+	<br><br>
+
+	<tr>
+		<td>userId</td>
+		<td><input type="text" name="" id="uId" maxlength="6" minlength="1"></td>
+	</tr>
+	<br><br>
+
+	<tr>
+		<td>Age</td>
+		<td><input type="number" name="" id="uAge" min="18" max="100"></td>
+	</tr>
+	<br><br>
+
+	<tr>
+		<td></td>
+		<td><input type="submit" name="" value="submit" onclick="validate()"></td>
+	</tr>
+
+	</table>
+</form>
+
+</body>
+</html>

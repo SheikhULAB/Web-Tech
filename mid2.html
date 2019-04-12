@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+</head>
+
+<body>
+    <form id="myForm">
+
+
+
+        <table>
+            <tr>
+                <td> Name: </td>
+
+                <td> <input type="text" id="validate" name=""> </td>
+               
+              
+            </tr>
+
+            <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit" onclick="clickme()"></td>
+
+               </tr>
+
+              </table>
+
+    </form>
+
+
+    
+   
+
+</body>
+
+<script>
+ function clickme() {
+            
+            var userName = document.getElementById("validate").value;
+         //   var userid = document.getElementById("id").value;
+           // var usriddChk = (userid.match(/[0-9]/g) ? true : false);
+
+    
+           //userName.match(/\W/g) ?  alert("special char found") :  alert("no  special char found"); 
+           //userName.match(/[A-z]/g) ?  alert("letter found") :  alert("no letter found"); 
+        //   userName.match(/[0-9]\W/g) ?  alert("gapla ase") :  alert("perfect validation"); 
+
+
+        var check_Char = userName.match(/\W/g) ? true : false;
+        var check_no =  userName.match(/[0-9]/g) ? true : false;
+        var check_un =  userName.match("_") ? true : false;
+        var check_a =  userName.match("a") ? true : false;
+
+        if( check_Char == true || check_no == true || check_un == true || check_a == true)
+        {
+           // let usrlbl = document.getElementById('name');
+           //usrlbl.innerText = " not vaild ";
+           alert("Not a valid format");
+        }
+
+        else {
+         alert("perfect validation");
+        }
+
+
+        //alert( userName.split("a").length-1) ;
+
+        //alert( userName.match("tahi")  ? "tahi found" : "tahi not found") ;
+var count=0;
+        for(let i  = 0 ; i<userName.length;i++)
+        {
+            userName[i] =="a" ? count++ : false ; 
+
+        }
+       // alert(count);
+
+
+            //The following validation checks if there is any char in the field
+
+        }
+</script>
+
+</html>
