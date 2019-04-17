@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>P5.js Example</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+
+
+	</head>
+
+	<body>
+ 
+
+		<script>
+			/*
+			function setup() {
+                  createCanvas(windowWidth, windowHeight);
+                  background(32);
+          }
+
+          /* function draw() {
+                  var circleX = random(width);
+                   var circleY = random(height);
+                    var circleSize = random(10, 100);
+
+                    ///var circleA = random(width);
+                  // var circleB = random(height);
+                    var circleSize = random(10, 100);
+                     fill(random(255), random(255), random(255));
+
+  
+                       ellipse(circleX, circleY, circleSize)
+                       triangle(30, 75, 58, 20, 86, 75);
+
+
+        }
+
+        */
+
+        var x = 0;
+var y = 0;
+var up = true;
+
+function setup() { 
+  createCanvas(windowWidth, windowHeight);
+  background(255);
+
+} 
+
+function draw() {
+  if (up) {
+     var circleX = random(width);
+     var circleY = random(height);
+
+    var squareX = random(width);
+     var squareY = random(height);
+
+          noStroke(); 
+          fill(random(255), random(220), 0);
+                       ellipse(circleX, circleY, 50)
+      triangle(x, y, x+25, y+50, x+50, y);
+
+      square(squareX, squareY, 55);
+
+
+      up = false;
+  }
+  else {
+    // up is false    
+    var circleX = random(width);
+     var circleY = random(height);
+     var squareX = random(width);
+     var squareY = random(height);
+              noStroke(); 
+          fill(random(255), random(200), 0);
+       ellipse(circleX, circleY, 50)
+       triangle(x+25, y, x, y+50, x+50, y+50); 
+       square(squareX, squareY, 55);
+    up = true;    
+  }       
+  
+  x+= 50;
+  if (x > width) {
+    x = 0;
+    y += 50;
+  }
+  
+  if (y > height) {
+    background(255);
+    x = 0;
+    y = 50;
+  
+  }
+  
+}
+
+     var circleX = random(width);
+      var circleY = random(height);
+     var circleSize = random(10, 100);
+    ellipse(56, 46, 55, 55);        
+
+
+			
+		</script>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
