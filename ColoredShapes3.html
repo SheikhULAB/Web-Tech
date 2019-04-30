@@ -1,0 +1,158 @@
+<html>
+    <head>
+      <style>
+        .circle {
+            width: 40px;
+            height: 40px;
+            margin: 2px;
+            border: 2px solid transparent;
+
+            border-radius: 50px;
+
+
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 50px solid black;
+            margin: 2px;
+            float: left;
+
+
+        }
+
+
+        .square {
+            /*makes left effective*/
+            float: left;
+
+            width: 40px;
+            height: 40px;
+            margin: 2px;
+            border: 2px solid rgb(17, 17, 19);
+
+
+
+        }
+
+#container {
+    margin: 10px;
+    width: 100px;
+    height: 550px;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+
+
+.square {
+    -webkit-animation: bounce 1.5s infinite;
+    -moz-animation: bounce 1.5s infinite;
+    -o-animation: bounce 1.5s infinite;
+    animation: bounce 1.5s infinite;
+}
+
+
+
+@-webkit-keyframes bounce {
+    from {
+        top: 0px;
+        -webkit-animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+    }
+
+    50% {
+        top: 500px;
+        -webkit-animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+    }
+    to {
+        top: 0px;
+    }
+}
+
+@-moz-keyframes bounce {
+    from {
+        top: 0px;
+        -moz-animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+    }
+    50% {
+        top: 500px;
+        -moz-animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+    }
+    to {
+        top: 0px;
+    }
+}
+
+@-o-keyframes bounce {
+    from {
+        top: 0px;
+        -o-animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+    }
+    50% {
+        top: 500px;
+        -o-animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+    }
+    to {
+        top: 0px;
+    }
+}
+
+
+
+@keyframes bounce {
+    from {
+        top: 0px;
+        animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+    }
+    50% {
+        top: 500px;
+        animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+    }
+    to {
+        top: 0px;
+    }
+}
+    </style>
+
+
+    </head>
+     
+    <body onload="changeBackground();">
+
+     <div id="container">
+
+    <script>
+
+        var range = 10;
+         var number = Math.floor(Math.random() * range ) ;
+
+
+        for (i = 1; i <= 33; i++) {
+
+            //dynamically filled with div with class name and id
+
+            var div = document.createElement('div'); // create a div tag for html
+
+            div.id = "shape " + i; // assign unique id for every shapes.
+
+            div.className = 'square'; // assign css shapes like square/circle/triangle
+
+            document.body.appendChild(div); // show the shape in page
+        }
+
+
+       
+
+       
+
+
+    </script>
+
+    <div id="container">
+    <div class="bouncing"></div>
+</div>
+</body>
+</html>

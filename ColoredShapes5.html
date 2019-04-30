@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+ .square {
+            /*makes left effective*/
+            float: left;
+
+            width: 60px;
+            height: 60px;
+            margin: 1px;
+            border: 0.5px solid rgb(17, 17, 19);
+
+
+
+        }
+
+        .circle {
+            width: 40px;
+            height: 40px;
+            margin: 2px;
+            border: 2px solid transparent;
+
+            border-radius: 50px;
+
+
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 50px solid black;
+            margin: 2px;
+            float: left;
+
+
+        }
+
+
+	</style>
+</head>
+<body onload="changeBackground();">
+
+
+	<script>
+
+        var range = 50;
+         var number = Math.floor(Math.random() * range ) ;
+
+
+        for (i = 1; i <= 100; i++) {
+
+            //dynamically filled with div with class name and id
+
+            var div = document.createElement('div'); // create a div tag for html
+
+            div.id = "shape " + i; // assign unique id for every shapes.
+            div.className = 'square';
+            document.body.appendChild(div); // show the shape in page // assign css shapes like square/circle/triangle
+
+        }
+
+       function changeBackground() {
+            for (i = 1; i <= 100; i++) {
+                if (i == 1) { // for evenly square shapes
+                    //get every div id and change the color randomly.
+                    document.getElementById("shape " + i).style.backgroundColor =
+                        '#' + Math.floor(Math.random() * 16777215).toString(16);
+                }
+
+                else if (i == 2) { // for evenly circle shapes
+                    document.getElementById("shape " + i).classList.add('circle'); // all of our shapes are  square and change to circle.
+                    document.getElementById("shape " + i).style.backgroundColor =
+                        '#' + Math.floor(Math.random() * 16777215).toString(16);
+                }
+                else if (i == 3) {  // for evenly traignle shapes
+                    document.getElementById("shape " + i).classList.remove('square'); // triangle need no width and height so remove square first.
+                    document.getElementById("shape " + i).classList.add('triangle');// then add triangle to  div
+
+                    document.getElementById("shape " + i).style.borderBottomColor =
+                        '#' + Math.floor(Math.random() * 16777215).toString(16);
+                }
+            }
+        }
+
+        setInterval(changeBackground, 3000);
+
+
+       
+
+       
+
+
+    </script>
+
+</body>
+</html>

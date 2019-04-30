@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="5">
+	<title>FallShape</title>
+<style type='text/css'>
+.CR {
+  
+  width: 135px;
+  height: 135px;
+  
+  border-radius: 50%;
+  bottom: auto;
+  margin: 1px;
+  position: relative;
+  animation: falling 5s, rotate 3s;
+  animation-delay: 0s, 3s;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards, both;
+  -webkit-animation: falling 1s, rotate 6s;
+  -webkit-animation-delay: 0s, 1s;
+  -webkit-animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards, both;
+}
+
+.SQ {
+
+	width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  
+  
+  bottom: auto;
+  margin: 1px;
+  position: relative;
+           left: 235px;
+           
+  animation: falling 5s, rotate 3s;
+  animation-delay: 0s, 3s;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards, both;
+  -webkit-animation: falling 1s, rotate 2s;
+  -webkit-animation-delay: 0s, 1s;
+  -webkit-animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards, both;
+}
+
+
+
+@keyframes falling { 
+   0% {bottom: 100%;}
+   100%{bottom:0%; }
+}
+@keyframes rotate { 
+   0% {-webkit-transform: rotateX(0deg); background-color: rgb(255,99,71); }
+   25%{-webkit-transform:rotateX(160deg); background-color: rgb(220,20,60); }
+   50%{-webkit-transform:rotateX(260deg); background-color: rgb(138,43,226); }
+   100%{-webkit-transform:rotateX(360deg); background-color: rgb(255,99,71); }
+}
+
+</style>
+</head>
+<body>
+  
+
+
+  <div id='circle' class="CR"></div>
+  <div id='circle' class="CR"></div>
+  <div id='circle' class="CR"></div>
+  <div id='circle' class="CR"></div>
+  <div id='circle' class="CR"></div>
+  <div id='circle' class="CR"></div>
+
+  	
+  	<div id="squre" class="SQ"></div>
+  	<div id="squre" class="SQ"></div>
+  	<div id="squre" class="SQ"></div>
+  	<div id="squre" class="SQ"></div>
+
+ 
+
+</body>
+</html>
